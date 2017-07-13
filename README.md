@@ -22,7 +22,7 @@ So vim will be something like this:
 ![vim](images/vim_dracula.png)
 
 It also works well with editing with [YouCompleteMe](https://github.com/Valloric/YouCompleteMe), here is a python version for it.
-![python_lint](python_lint.png)
+![python_lint](images/python_lint.png)
 
 ## Tmux
 
@@ -34,7 +34,13 @@ perl test.pl
 and the results will be something like this:
 ![iterm](images/true_color_test.png)
 
-Here we can use the embeded function ```imgcat``` in iTerm for perviewing images in terminal.
+Here we can use the embeded function 
+```sh
+imgcat
+``` 
+in iTerm for perviewing images in terminal.
 ![imgcat](images/imgcat.png)
 
-
+## Ipython
+This theme also works for iPython kernels
+![ipython](images/ipython.png)
