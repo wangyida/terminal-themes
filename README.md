@@ -58,6 +58,7 @@ It also works well with editing with [YouCompleteMe](https://github.com/Valloric
 ### iTerm
 
 You should have a test for determing whether the specific terminal like **iTerm** supports true color or not by executing:
+
 ```perl
 perl test.pl
 ```
@@ -65,6 +66,7 @@ and the results will be something like this:
 ![iterm](images/true_color_test.png)
 
 Here we can use the embeded function 
+
 ```sh
 imgcat
 ``` 
@@ -75,3 +77,7 @@ in iTerm for perviewing images in terminal.
 
 This theme also works for iPython kernels
 ![ipython](images/ipython.png)
+
+### Atom
+
+![atom](images/atom.png)
