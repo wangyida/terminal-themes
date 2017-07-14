@@ -4,6 +4,17 @@
 
 **Environments**: OS, Ubuntu and other Linux/Unix platform
 
+## Installation
+
+You can just install all those themes via
+```sh
+git clone https://github.com/wangyida/terminal-themes.git
+cd terminal-themes
+cp ./*rc* ~/
+```
+
+Pull request welcomed!!
+
 ## Theme
 
 Note that I adopt **Dracula** theme for every configureing files which is 
@@ -22,8 +33,10 @@ Hack is designed to be a workhorse typeface for code. It has deep roots in the l
 
 ### VIM
 
-Some themes in vim might not be available when the terminal supports true color, but you have not define this in **.vimrc**, In April Vim merged [patch 7.4.1799](https://groups.google.com/forum/#!topic/vim_dev/mAhjlVqpKts), which appears to simplify settings for using true colors in the terminal. After upgrading to this patch, users simply had to include set termguicolors in their vimrc to get true colors in the terminal– the one caveat being that it has to be a terminal like iTerm2 that also supports “true colors”.  
+Some themes in vim might not be available when the terminal supports true color, but you have not define this in **.vimrc**, In April Vim merged [patch 7.4.1799](https://groups.google.com/forum/#!topic/vim_dev/mAhjlVqpKts), which appears to simplify settings for using true colors in the terminal. After upgrading to this patch, users simply had to include set termguicolors in their vimrc to get true colors in the terminal– the one caveat being that it has to be a terminal like iTerm2 that also supports “true colors”.
+
 ![eye](images/eye.png)
+
 You should define this for Iterm:
 ```sh
 " gui colors if running iTerm
