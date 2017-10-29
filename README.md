@@ -1,6 +1,10 @@
 # Terminal Theme Modification
 
-**Author**: Yida Wang
+Here is a dark purple theme for terminal works such as vim editing and shell working.
+
+**Home page**: [TT](https://wangyida.github.io/terminal-themes/)
+
+**Author**: [Yida Wang](https://wangyida.github.io/)
 
 **Environments**: OS, Ubuntu and other Linux/Unix platform
 

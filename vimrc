@@ -40,6 +40,12 @@ Plugin 'lervag/vimtex'
 " A code-completion engine for Vim
 Plugin 'Valloric/YouCompleteMe'
 
+" Syntax checking
+Plugin 'vim-syntastic/syntastic'
+
+" Vim syntax for TOML
+Plugin 'cespare/vim-toml'
+
 " A dark theme for Vim: dracula
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -79,7 +85,30 @@ color dracula
 " like iTerm2 that also supports “true colors”.
 " gui colors if running iTerm
 if $TERM_PROGRAM =~ "iTerm"
-  set termguicolors
+"  set termguicolors
 endif
 
+" neovim true color
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" vim airline
+let g:airline_left_sep = '⮀'
+let g:airline_right_sep = '⮂'
+
 let g:vimtex_view_method = 'zathura'
+
+" Syntastic checks
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode = "passive"
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+
+" spell setting
+"
+hi SpellBad cterm=bold,italic 
+" ctermfg=red

@@ -70,7 +70,6 @@ export LANG=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -86,4 +85,6 @@ export LANG=en_US.UTF-8
 #alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias imgcat="zsh ~/Documents/ScriptSH/imgcat.sh"
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="TERM=screen-256color tmux"
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
