@@ -49,9 +49,12 @@ Plugin 'cespare/vim-toml'
 " A dark theme for Vim: dracula
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'dracula/dracula-theme'
-Plugin 'dracula/vim'
 
+" base 16 color themes
+Plugin 'chriskempson/base16-vim'
+
+" Vim plugin that displays tags in a window, ordered by scope
+Plugin 'majutsushi/tagbar'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -79,13 +82,14 @@ set cursorline
 set cursorcolumn
 set colorcolumn=80
 
-color dracula
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-dracula 
 " users simply had to include set termguicolors in their vimrc to get true 
 " colors in the terminal– the one caveat being that it has to be a terminal 
 " like iTerm2 that also supports “true colors”.
 " gui colors if running iTerm
 if $TERM_PROGRAM =~ "iTerm"
-"  set termguicolors
+  set termguicolors
 endif
 
 " neovim true color
@@ -96,6 +100,8 @@ let g:airline_left_sep = '⮀'
 let g:airline_right_sep = '⮂'
 
 let g:vimtex_view_method = 'zathura'
+let g:vimtex_fold_enabled = 0 
+let g:tex_flavor = "latex"
 
 " Syntastic checks
 set statusline+=%#warningmsg#
@@ -108,7 +114,13 @@ let g:syntastic_mode = "passive"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 
-" spell setting
-"
-hi SpellBad cterm=bold,italic 
-" ctermfg=red
+" vim-markdown
+let g:vim_markdown_folding_level = 3
+
+" Enable folding
+" press 'za' to unfold or fold
+set foldmethod=indent
+set foldlevel=3
+
+" TagBar setup
+nmap <F8> :TagbarToggle<CR>
