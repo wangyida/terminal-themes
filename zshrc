@@ -82,9 +82,14 @@ export LANG=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-#alias zshconfig="mate ~/.zshrc"
+# alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias imgcat="zsh ~/Documents/ScriptSH/imgcat.sh"
 alias tmux="TERM=screen-256color tmux"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Base16 for Shells https://github.com/chriskempson/base16
+# Firstly you need to install base16 for shell by:
+# git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"

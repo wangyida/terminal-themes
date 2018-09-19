@@ -49,12 +49,14 @@ Plugin 'cespare/vim-toml'
 " A dark theme for Vim: dracula
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-" base 16 color themes
 Plugin 'chriskempson/base16-vim'
 
 " Vim plugin that displays tags in a window, ordered by scope
 Plugin 'majutsushi/tagbar'
+
+" Beautify for codes
+Plugin 'zeekay/vim-beautify'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -83,7 +85,7 @@ set cursorcolumn
 set colorcolumn=80
 
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-dracula 
+colorscheme base16-tomorrow-night
 " users simply had to include set termguicolors in their vimrc to get true 
 " colors in the terminal– the one caveat being that it has to be a terminal 
 " like iTerm2 that also supports “true colors”.
@@ -115,12 +117,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 
 " vim-markdown
-let g:vim_markdown_folding_level = 3
+let g:vim_markdown_folding_level = 4
 
 " Enable folding
 " press 'za' to unfold or fold
 set foldmethod=indent
-set foldlevel=3
+set foldlevel=4
 
 " TagBar setup
 nmap <F8> :TagbarToggle<CR>
