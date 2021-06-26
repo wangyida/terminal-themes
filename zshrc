@@ -84,8 +84,9 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-alias imgcat="zsh ~/Documents/ScriptSH/imgcat.sh"
+alias imgcat="zsh ~/Documents/script_shell/imgcat.sh"
 alias tmux="TERM=screen-256color tmux"
+alias tmux='tmux -2'  # for 256color
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Base16 for Shells https://github.com/chriskempson/base16

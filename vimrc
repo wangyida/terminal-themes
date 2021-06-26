@@ -38,7 +38,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'lervag/vimtex'
 
 " A code-completion engine for Vim
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " Syntax checking
 Plugin 'vim-syntastic/syntastic'
@@ -85,7 +85,7 @@ set cursorcolumn
 set colorcolumn=80
 
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-tomorrow-night
+colorscheme base16-irblack
 " users simply had to include set termguicolors in their vimrc to get true 
 " colors in the terminal– the one caveat being that it has to be a terminal 
 " like iTerm2 that also supports “true colors”.
