@@ -2,12 +2,12 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/yidawang/.oh-my-zsh
+export ZSH=/Users/yida/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="dracula"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -87,7 +87,7 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 alias imgcat="zsh ~/Documents/script_shell/imgcat.sh"
 alias tmux="TERM=screen-256color tmux"
 alias tmux='tmux -2'  # for 256color
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Base16 for Shells https://github.com/chriskempson/base16
 # Firstly you need to install base16 for shell by:
