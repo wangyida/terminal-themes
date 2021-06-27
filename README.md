@@ -1,29 +1,34 @@
-# Terminal Theme Modification
+# Terminal Theme Configuration
 
-Here is a dark purple theme for terminal works such as vim editing and shell working.
+A dark theme for terminal related panels, especially on Mac, such as vim, shell and tmux.
 
 **Home page**: [TT](https://wangyida.github.io/terminal-themes/)
 
 **Author**: [Yida Wang](https://wangyida.github.io/)
 
-**Environments**: OS, Ubuntu and other Linux/Unix platform
+**Environments**: Any Linux/Unix platform
+
+![teasor](images/theme.png)
 
 ## Installation
-
-You can just install all those themes via
+Firstly clone this repo
 ```sh
 git clone https://github.com/wangyida/terminal-themes.git
 cd terminal-themes
-cp ./*rc* ~/
 ```
-
-Pull request welcomed!!
-
-## Theme
-
-Note that I adopt **Dracula** theme for every configureing files which is 
-available in this [page](https://draculatheme.com/)
-![dracula](images/dracula.svg)
+For machines which support true color, [Base16 for Shells](https://github.com/chriskempson/base16) could be installed in advance
+```sh
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+```
+The IR_BLACK theme could be adopted by
+```sh
+base16_irblack
+```
+Then both zsh and VIM could be configured with 
+```sh
+cp ./vimrc ~/.vimrc
+cp ./zshrc ~/.zshrc
+```
 
 ## Font
 
