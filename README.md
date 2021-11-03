@@ -20,14 +20,16 @@ For machines which support true color, [Base16 for Shells](https://github.com/ch
 ```sh
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 ```
-The IR_BLACK theme could be adopted by
-```sh
-base16_irblack
-```
 Then both zsh and VIM could be configured with 
 ```sh
 cp ./vimrc ~/.vimrc
+source ~/.vimrc
 cp ./zshrc ~/.zshrc
+source ~/.zshrc
+```
+The IR_BLACK theme could be adopted by
+```sh
+base16_irblack
 ```
 
 ## Font
