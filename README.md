@@ -2,11 +2,9 @@
 
 A dark theme for terminal related panels, especially on Mac, such as vim, shell and tmux.
 
-**Home page**: [TT](https://wangyida.github.io/terminal-themes/)
+[Cross-platform dark theme](https://wangyida.github.io/terminal-themes/) authored by [Yida Wang](https://wangyida.github.io/)
 
-**Author**: [Yida Wang](https://wangyida.github.io/)
-
-**Environments**: Any Linux/Unix platform
+**Environments**: Linux/Unix platform
 
 ![teasor](images/themes.png)
 
@@ -20,10 +18,18 @@ For machines which support true color, [Base16 for Shells](https://github.com/ch
 ```sh
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 ```
+Set up [Vundle] for package management of VIM:
+```sh
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 Then both zsh and VIM could be configured with 
 ```sh
 cp ./vimrc ~/.vimrc
 source ~/.vimrc
+```
+To install Plugins, launch `vim` and run `:PluginInstall`
+
+```sh
 cp ./zshrc ~/.zshrc
 source ~/.zshrc
 ```
