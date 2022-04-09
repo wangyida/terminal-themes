@@ -9,7 +9,7 @@ A dark theme for terminal related panels, especially on Mac, such as vim, shell 
 ![teasor](images/themes.png)
 
 ## Installation
-Firstly clone this repo
+### Configuration download
 ```sh
 git clone https://github.com/wangyida/terminal-themes.git
 cd terminal-themes
@@ -18,21 +18,36 @@ For machines which support true color, [Base16 for Shells](https://github.com/ch
 ```sh
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 ```
-Set up [Vundle] for package management of VIM:
+
+### ZSH setups
+```sh
+cp ./zshrc ~/.zshrc
+```
+Once zsh is installed, `oh-my-zsh` could be installed via
+```sh
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+```
+Then zsh syntax highlighting tool could be downloaded by
+```sh
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+Finally set it up by `source`
+```sh
+source ~/.zshrc
+```
+
+### VIM setups
+Set up [Vundle] for package management:
 ```sh
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
-Then both zsh and VIM could be configured with 
 ```sh
 cp ./vimrc ~/.vimrc
 source ~/.vimrc
 ```
 To install Plugins, launch `vim` and run `:PluginInstall`
 
-```sh
-cp ./zshrc ~/.zshrc
-source ~/.zshrc
-```
 The IR_BLACK theme could be adopted by
 ```sh
 base16_irblack
