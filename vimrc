@@ -97,9 +97,6 @@ endif
 " neovim true color
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-" vim airline
-let g:airline_left_sep = '⮀'
-let g:airline_right_sep = '⮂'
 
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_fold_enabled = 0 
