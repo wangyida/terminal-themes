@@ -96,7 +96,7 @@ and the results will be something like this:
 
 Here we can use the embeded function 
 
-```sh
+```bash
 imgcat
 ``` 
 in iTerm for perviewing images in terminal.
@@ -110,3 +110,64 @@ This theme also works for iPython kernels
 ### Atom
 
 ![atom](images/atom.png)
+
+# NVidia related setups
+
+## Environment setup
+
+plausible hardwares are 3090
+
+## tiny-cuda-nn
+`Python 3.8+` is needed
+
+### Promblems
+
+`ld: cannot find -lcuda`
+
+```bash
+ln -s /usr/lib/x86_64-linux-gnu/libcuda.so miniconda3/envs/<env_path>/lib/libcuda.so
+```
+
+Note that the libcuda.so must from the Nvidia Driver Lib, not Cuda Lib
+Correct: Nvidia Driver Lib: `/usr/lib/i386-linux-gnu/libcuda.so`
+Wrong: Cuda lib: `<cuda_home>/lib64/stubs/libcuda.so`
+
+## nerfacc
+The [sampling strategy](https://www.nerfacc.com/en/latest/methodology/sampling.html) supplemented by nerfacc is widely adopted.
+Problem: `RuntimeError: CUDA error: invalid configuration argument`. Sometimes we need to ensure that [nerfacc](https://www.nerfacc.com/en/latest/) builds the CUDA code on the first run (JIT) if we install with `pip install nerfacc`, messages below shall be shown.
+```bash
+( ●    ) NerfAcc: Setting up CUDA (This may take a few minutes)
+```
+Otherwise a safe way to use the lastest nerfacc is building from source
+```bash
+pip install git+https://github.com/KAIR-BAIR/nerfacc.git
+```
+
+
+## nvdiffrast
+```bash
+/home/yidaw/anaconda3/bin/pip3 install git+https://github.com/NVlabs/nvdiffrast.git
+```
+
+## Huggingface
+Problem: `SSLError: HTTPSConnectionPool(host='huggingface.co', port=443)`.
+Solution: using `CURL_CA_BUNDLE=''` to bypass ssl verification from `requests`. However, this is now deemed a bug (which it arguably should be) and from requests=2.28 onwards, where `CURL_CA_BUNDLE=''` is no longer supported. It could be solved by downgrading `requests` version to 2.27.1
+```bash
+pip install requests==2.27.1
+```
+so that `CURL_CA_BUNDLE = ''` can be functional in terminal, otherwise it does not work
+or embed the following codes in the python script
+```python
+import os
+os.environ['CURL_CA_BUNDLE'] = ''
+```
+
+## bitsandbytes
+Requirements Python >=3.8. Linux distribution (Ubuntu, MacOS, etc.) + CUDA > 10.0.
+
+(Deprecated: CUDA 10.0 is deprecated and only CUDA >= 11.0) will be supported with release 0.39.0)
+In case CUDA version does not match with the installed bitsandbytes
+```sh
+CUDA_VERSION=114 make cuda11x
+python setup.py install
+```
